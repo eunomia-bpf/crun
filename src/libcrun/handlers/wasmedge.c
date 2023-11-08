@@ -127,7 +127,7 @@ libwasmedge_exec (void *cookie, __attribute__ ((unused)) libcrun_container_t *co
   // Try to load plugins from the system paths
   // With this, we can enable WASI-NN or any new WASI proposals.
   WasmEdge_PluginLoadWithDefaultPaths ();
-  WasmEdge_PluginLoadFromPath ("/libwasmedgePluginWasiNN.so");
+  WasmEdge_PluginLoadFromPath ("/libwasmedgePluginWasmBpf.so.so");
 
   vm = WasmEdge_VMCreate (configure, NULL);
   if (UNLIKELY (vm == NULL))
